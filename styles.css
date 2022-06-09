@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 
 body {
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
   --grey: rgb(231, 230, 225);
   --background: white;
@@ -13,11 +13,12 @@ body {
   --light: rgb(253, 253, 247);
   --text: #2490f1;
   background: var(--light);
+  max-width: 80rem;
 }
 
 #banner {
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   height: 17rem;
   margin: 0;
   font-family: 'Rubik', monospace;
@@ -97,8 +98,12 @@ section {
 }
 
 h2 {
-    color: var(--dark);
-  margin-left: 10%;
+    color: var(--text);
+    background: var(--dark);
+    border-top-left-radius: 10% 100%;
+    padding: 0.5em 0 0.5em 2em;
+    font-size: 2rem;
+  border-bottom-right-radius: 20% 100%;
   font-family: 'Encode Sans'
 }
 
@@ -120,6 +125,7 @@ p {
 }
 
 #project-contents {
+    max-width: 10rem;
 }
 
 #project-contents ul {
@@ -134,4 +140,9 @@ p {
     margin: 0;
     border-bottom: 1px solid var(--dark);
     border-right: 1px solid var(--dark);
+}
+
+#project-display {
+    width: 100%;
+    height: 90vh;
 }
