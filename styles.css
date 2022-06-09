@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  --grey: rgb(231, 230, 225);
+  --background: white;
+  --dark: #1e1e1e;
+  --light: rgb(253, 253, 247);
+  --text: #2490f1;
+  background: var(--light);
+}
+
+#banner {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 17rem;
+  margin: 0;
+  font-family: 'Rubik', monospace;
+  font-weight: bold;
+  padding: 3rem 0 0 5rem;
+  background: linear-gradient(120deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%);
+  margin: 0;
+  border-top-left-radius: 10% 100%;
+  border-bottom-right-radius: 20% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#banner::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: url("code.png") right/70%, black;
+    filter: blur(2px);
+}
+
+.title {
+  color: var(--light);
+  font-size: 7rem;
+}
+
+.subtitle {
+  color: var(--light);
+  font-size: 2rem;
+}
+
+#navbar {
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  background: var(--grey);
+  margin: 0;
+  font-family: 'Encode Sans';
+  box-shadow: 0 0.1em 0.2em #aaa;
+}
+
+#navbar > ul {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 80rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#navbar li {
+  margin: 0.5em 2em;
+  padding: 0;
+  display: inline-block;
+}
+
+#navbar a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+section {
+    margin-top: 5rem;
+}
+
+.section-content {
+  background: var(--grey);
+  padding: 2rem 3rem;
+  font-family: 'Ubuntu';
+  font-weight: normal;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+h2 {
+    color: var(--dark);
+  margin-left: 10%;
+  font-family: 'Encode Sans'
+}
+
+h3 {
+  font-weight: normal;
+  font-family: 'Encode Sans';
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 2rem 0;
+}
+
+#project-wrapper {
+    margin: 0 -3rem;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: row;
+}
+
+#project-contents {
+}
+
+#project-contents ul {
+    padding: 0;
+    margin: 0;
+}
+
+#project-contents li {
+    display: block;
+    list-style: none;
+    padding: 1em 2em;
+    margin: 0;
+    border-bottom: 1px solid var(--dark);
+    border-right: 1px solid var(--dark);
+}
