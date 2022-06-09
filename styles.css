@@ -196,13 +196,14 @@ p {
 
 #project-display {
     width: 100%;
-    height: 90vh;
+    /* height: 90vh; */
     scroll-padding-top: -5rem;
 }
 
 #project-display > div {
     display: none;
     position: relative;
+    margin: 0 1em;
 }
 
 .text-bottom {
@@ -234,11 +235,11 @@ h4 {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(253, 253, 247, 0.9) 40%, rgba(255, 255, 255, 0) 70%);
+    background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%);
 }
 
 #social-background {
-    background: linear-gradient(45deg, rgba(253, 253, 247, 0.9) 40%, rgba(255, 255, 255, 0) 70%),
+    background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
         url("social.png") center/100% no-repeat;
     width: 100%;
     aspect-ratio: 118/90;
