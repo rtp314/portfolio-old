@@ -1,67 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Reed Coding</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-    <script type="module" src="main.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Samuel Reed Coding</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+        <script type="module" src="main.js"></script>
+    </head>
+    <body>
+        <div id="banner">
+            <div id="banner-wrapper">
+                <div class="title">.src</div>
+                <div class="subtitle">Samuel Reed Coding</div>
+            </div>
+        </div>
 
-</head>
-<body>
-    <div id="banner">
-        <div class="title">.src</div>
-        <div class="subtitle">Samuel Reed Coding</div>
-      </div>
-      
-      <div id="navbar">
-        <ul>
-          <a href="#about"><li>{ About }</li></a>
-          <a href="#projects"><li>{ Projects }</li></a>
-          <a href="#contact"><li>{ Contact }</li></a>
-        </ul>
-      </div>
-      
-      <section id="about">
-        <h2>{ About }</h2>
-        <div class="section-content">
-        <h3>Freelance Javascript web developer, specialising in building interactive websites and single page apps with React.js</h3>
-          <p>I enjoy learning new frameworks and technologies. Recently, I've been working with React, React Router, Next.js, node, Express, Firebase, and MongoDB.</p>
+        <div id="navbar">
+            <ul>
+                <a href="#about"><li>{ About }</li></a>
+                <a href="#projects"><li>{ Projects }</li></a>
+                <a href="#contact"><li>{ Contact }</li></a>
+            </ul>
         </div>
-      </section>
-      
-      <section id="projects">
-        <h2>{ Projects }</h2>
-        <div class="section-content">
-        <h3>Here are a few things I've been working on recently:</h3>
-          <div id="project-wrapper">
-            <div id="project-contents">
-                <ul>
-                    <li>Social</li>
-                    <li>Calculator</li>
-                    <li>Vadsbo</li>
-                    <li>D3.js</li>
-                </ul>
+
+        <section id="about">
+            <h2>{<span class="expand"> About </span>}</h2>
+            <div class="section-content">
+                <h3>
+                    Freelance Javascript web developer, specialising in building interactive websites and single page
+                    apps with React.js
+                </h3>
+                <p>
+                    I enjoy learning new frameworks and technologies. Recently, I've been working with React, React
+                    Router, Next.js, node, Express, Firebase, and MongoDB.
+                </p>
             </div>
-            <div id="project-display">
-                <p class="codepen" data-height="800" data-theme-id="dark" data-default-tab="css,result" data-slug-hash="GROjpev" data-user="reversethepolarity" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/reversethepolarity/pen/GROjpev">
-                    React Calculator</a> by Samuel (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+
+        <section id="projects">
+            <h2>{ Projects }</h2>
+            <div class="section-content">
+                <h3>Here are a few things I've been working on recently:</h3>
+                <div id="project-wrapper">
+                    <div id="project-contents">
+                        <ul>
+                            <li id="social">Social</li>
+                            <li id="calculator">Calculator</li>
+                            <!-- <li id="vadsbo">Vadsbo</li> -->
+                            <li id="d3">D3.js</li>
+                        </ul>
+                    </div>
+                    <div id="project-display">
+                        <div id="calculator-display">
+                            <div class="project-info absolute">
+                                <div class="text-bottom">
+                                    <p>Calculator App built with React Components</p>
+                                    <p>
+                                        Handles basic arithmetic as well as exponentials. Detects and prevents input
+                                        overflows.
+                                    </p>
+                                    <p class="bold">Technologies used: React Components</p>
+                                    <p>Click to close this information and explore the code</p>
+                                </div>
+                            </div>
+                            <p
+                                class="codepen"
+                                data-height="800"
+                                data-theme-id="dark"
+                                data-default-tab="js,result"
+                                data-slug-hash="GROjpev"
+                                data-user="reversethepolarity"
+                                style="
+                                    height: 300px;
+                                    box-sizing: border-box;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 2px solid;
+                                    margin: 1em 0;
+                                    padding: 1em;
+                                "
+                            >
+                                <span
+                                    >See the Pen
+                                    <a href="https://codepen.io/reversethepolarity/pen/GROjpev"> React Calculator</a>
+                                    by Samuel (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span
+                                >
+                            </p>
+                            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                        </div>
+                        <div id="d3-display">
+                            <div class="project-info absolute">
+                                <div class="text-bottom">
+                                    <p>Data visualisation using D3.js</p>
+                                    <p>
+                                        Pulls historical temperature data from an API and programmatically creates a
+                                        heatmap charting temperature by year.
+                                    </p>
+                                    <p class="bold">Technologies used: D3.js, fetch API</p>
+                                    <p>Click to close this information and explore the code</p>
+                                </div>
+                            </div>
+                            <p
+                                class="codepen"
+                                data-height="900"
+                                data-theme-id="dark"
+                                data-default-tab="js,result"
+                                data-slug-hash="YzEKwJr"
+                                data-user="reversethepolarity"
+                                style="
+                                    height: 900px;
+                                    box-sizing: border-box;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 2px solid;
+                                    margin: 1em 0;
+                                    padding: 1em;
+                                "
+                            >
+                                <span
+                                    >See the Pen
+                                    <a href="https://codepen.io/reversethepolarity/pen/YzEKwJr"> Heat Map</a> by Samuel
+                                    (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>) on
+                                    <a href="https://codepen.io">CodePen</a>.</span
+                                >
+                            </p>
+                            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                        </div>
+                        <div id="social-display">
+                            <div id="social-background" class="project-info">
+                                <h4>{ Social }</h4>
+                                <div class="text-bottom">
+                                    <p>A simple social networking website, built using React and Firestore.</p>
+                                    <p class="bold">Technologies used: React (with Hooks), React Router, Firestore</p>
+                                    <p>
+                                        Login using your GMail, or use one of the premade test accounts. Post a message,
+                                        and open the chat in the sidebar. This is very much still a work in progress,
+                                        but it has been a very useful learning experience.
+                                    </p>
+                                    <p>
+                                        Visit the app at
+                                        <a href="https://social-rtp.herokuapp.com/">social-rtp.herokuapp.com/</a>
+                                    </p>
+                                    <p>Please be patient, Heroku can be slow to start up</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div id="vadsbo-display">
+                            <div id="vadsbo-background" class="project-info">
+                                <h4>{ Vadsbo dimmerGuiden }</h4>
+                                <div class="text-bottom">
+                                    <p>A simple social networking website, built using React and Firestore.</p>
+                                    <p class="bold">Technologies used: React (with Hooks), React Router, Firestore</p>
+                                    <p>
+                                        Login using your GMail, or use one of the premade test accounts. Post a message,
+                                        and open the chat in the sidebar. This is very much still a work in progress,
+                                        but it has been a very useful learning experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      <section id="contact">
-        <h2>{ Contact }</h2>
-        <div class="section-content">
-        <h3>Title</h3>
-          <p>Contact me by email, WhatsApp, or on LinkedIn</p>
-        </div>
-      </section>
-</body>
+        </section>
+
+        <section id="contact">
+            <h2>{ Contact }</h2>
+            <div class="section-content">
+                <p>
+                    Contact me by email or on LinkedIn. I'll be happy to talk about making your next project come to
+                    life.
+                </p>
+                <p>
+                    Email:
+                    <a href="mailto:samuelreed01@gmail.com">samuelreed01@gmail.com</a>
+                </p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/samuelreed01/">linkedin.com/in/samuelreed01/</a></p>
+            </div>
+        </section>
+    </body>
 </html>
