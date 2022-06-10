@@ -33,3 +33,12 @@ function closeOthers(focused) {
         closableInfo.forEach((div) => (div.style.display = "block"));
     });
 }
+
+window.onload = function () {
+    const outer = document.getElementById("social-display");
+    const inner = document.getElementById("social-info");
+    if (outer.offsetHeight < inner.offsetHeight) {
+        outer.style.height = inner.offsetHeight + 10 + "px";
+    }
+    console.log("inner: " + inner.offsetHeight);
+};
