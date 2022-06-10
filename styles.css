@@ -37,6 +37,7 @@ body {
     border-bottom-right-radius: 20% 100%;
     position: relative;
     overflow: hidden;
+    box-shadow: 0.2rem 0.2rem 0.2rem #aaa, -0.2rem -0.2rem 0.2rem #aaa;
 }
 
 #banner::before {
@@ -47,7 +48,7 @@ body {
     width: 100%;
     top: 0px;
     left: 0px;
-    background: url("Background.jpg") right/60%, black;
+    background: url("Background.jpg") top right/1500px, black;
     filter: blur(2px);
 }
 
@@ -111,6 +112,7 @@ section {
     font-weight: normal;
     margin: 1rem;
     border-radius: 1rem;
+    box-shadow: 0.2em 0.2em 0.2em #aaa;
 }
 
 h2 {
@@ -121,6 +123,7 @@ h2 {
     font-size: 2rem;
     border-bottom-right-radius: 20% 100%;
     font-family: "Encode Sans";
+    box-shadow: 0.2rem 0.2rem 0.2rem #aaa;
 }
 
 h3 {
@@ -221,6 +224,13 @@ p {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
 }
 
 h4 {
