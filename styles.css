@@ -233,6 +233,10 @@ p {
     gap: 1rem;
 }
 
+.icon-small {
+    height: 1.2em;
+}
+
 h4 {
     margin: 1rem 0 1rem 0;
     font-weight: normal;
