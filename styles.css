@@ -2,6 +2,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap");
 
+/* 
+CONTENTS: 
+    TITLE 
+    NAVBAR
+    SECTIONS 
+    @MEDIA
+    PROJECTS
+*/
+
 html {
     scroll-padding: 4rem;
     scroll-behavior: smooth;
@@ -20,6 +29,8 @@ body {
 * {
     box-sizing: border-box;
 }
+
+/* TITLE */
 
 #banner {
     box-sizing: border-box;
@@ -57,6 +68,10 @@ body {
 
 .title {
     color: var(--light);
+    background: linear-gradient(var(--light) 65%, var(--dark) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 7rem;
 }
 
@@ -64,6 +79,8 @@ body {
     color: var(--light);
     font-size: 2rem;
 }
+
+/* NAVBAR */
 
 #navbar {
     width: 100vw;
@@ -90,12 +107,15 @@ body {
     margin: 0.5em 2em;
     padding: 0;
     display: inline-block;
+    font-size: 1.2rem;
 }
 
 #navbar a {
     color: currentColor;
     text-decoration: none;
 }
+
+/* SECTIONS */
 
 section {
     margin: 5rem auto 0 auto;
@@ -130,24 +150,45 @@ h3 {
     font-size: 1.5rem;
 }
 
+h4 {
+    margin: 1rem 0 1rem 0;
+    font-weight: normal;
+    font-family: "Encode Sans";
+    font-size: 3rem;
+}
+
 p {
     margin: 2rem 0;
 }
 
-.expand {
-    animation: expand 400ms ease both;
+.bold {
+    font-weight: bold;
 }
 
-@keyframes expand {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-small {
+    height: 1.2em;
+}
+
+/* @MEDIA */
 
 @media (max-width: 800px) {
+    #banner {
+        border-radius: 0 !important;
+    }
+
     #project-wrapper {
         flex-direction: column !important;
         margin: 0 !important;
@@ -183,6 +224,8 @@ p {
         margin: 0 !important;
     }
 }
+
+/* PROJECTS */
 
 #project-wrapper {
     position: relative;
@@ -238,34 +281,6 @@ p {
     bottom: 1em;
     left: 2em;
     width: 60%;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-}
-
-.icon-small {
-    height: 1.2em;
-}
-
-h4 {
-    margin: 1rem 0 1rem 0;
-    font-weight: normal;
-    font-family: "Encode Sans";
-    font-size: 3rem;
 }
 
 .project-info {
