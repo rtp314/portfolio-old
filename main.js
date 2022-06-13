@@ -11,15 +11,17 @@ window.onload = function () {
     const social = document.getElementById("social");
     const calculator = document.getElementById("calculator");
     const d3 = document.getElementById("d3");
+    const snake = document.getElementById("snake");
     // const vadsbo = document.getElementById("vadsbo");
 
     const calculatorDisplay = document.getElementById("calculator-display");
     const socialDisplay = document.getElementById("social-display");
     const d3Display = document.getElementById("d3-display");
+    const snakeDisplay = document.getElementById("snake-display");
     // const vadsboDisplay = document.getElementById("vadsbo-display");
 
-    const buttons = [social, calculator, d3];
-    const displays = [calculatorDisplay, socialDisplay, d3Display];
+    const buttons = [social, calculator, d3, snake];
+    const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay];
 
     const closableInfo = Array.from(document.getElementsByClassName("absolute"));
 
@@ -28,6 +30,8 @@ window.onload = function () {
     calculator.addEventListener("click", () => closeOthers(calculatorDisplay));
     social.addEventListener("click", () => closeOthers(socialDisplay));
     d3.addEventListener("click", () => closeOthers(d3Display));
+    snake.addEventListener("click", () => closeOthers(snakeDisplay));
+
     // vadsbo.addEventListener("click", () => closeOthers(vadsboDisplay));
 
     function closeOthers(focused) {
