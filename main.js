@@ -12,16 +12,20 @@ window.onload = function () {
     const calculator = document.getElementById("calculator");
     const d3 = document.getElementById("d3");
     const snake = document.getElementById("snake");
+    const store = document.getElementById("store");
+
     // const vadsbo = document.getElementById("vadsbo");
 
     const calculatorDisplay = document.getElementById("calculator-display");
     const socialDisplay = document.getElementById("social-display");
     const d3Display = document.getElementById("d3-display");
     const snakeDisplay = document.getElementById("snake-display");
+    const storeDisplay = document.getElementById("store-display");
+
     // const vadsboDisplay = document.getElementById("vadsbo-display");
 
-    const buttons = [social, calculator, d3, snake];
-    const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay];
+    const buttons = [social, calculator, d3, snake, store];
+    const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay, storeDisplay];
 
     const closableInfo = Array.from(document.getElementsByClassName("absolute"));
 
@@ -31,6 +35,7 @@ window.onload = function () {
     social.addEventListener("click", () => closeOthers(socialDisplay));
     d3.addEventListener("click", () => closeOthers(d3Display));
     snake.addEventListener("click", () => closeOthers(snakeDisplay));
+    store.addEventListener("click", () => closeOthers(storeDisplay));
 
     // vadsbo.addEventListener("click", () => closeOthers(vadsboDisplay));
 
