@@ -4,7 +4,6 @@ window.onload = function () {
     if (outer.offsetHeight < inner.offsetHeight) {
         outer.style.height = inner.offsetHeight + 10 + "px";
     }
-    console.log("inner: " + inner.offsetHeight);
 
     const display = document.getElementById("project-display");
 
@@ -49,5 +48,52 @@ window.onload = function () {
             }
             closableInfo.forEach((div) => (div.style.display = "block"));
         });
+    }
+
+    const subtitle = document.querySelector(".subtitle");
+    console.log(subtitle);
+
+    typingAnimation(subtitle, 100);
+
+    function typingAnimation(el, delay) {
+        function blinkCursor() {
+            return new Promise((resolve) => {
+                setTimeout(() => (cursor.style.opacity = 0), 500);
+                setTimeout(() => (cursor.style.opacity = 1), 1000);
+                setTimeout(() => (cursor.style.opacity = 0), 1500);
+                setTimeout(() => {
+                    cursor.style.opacity = 1;
+                    resolve();
+                }, 2000);
+            });
+        }
+
+        function typing() {
+            return new Promise((resolve) => {
+                for (let i = 0; i < contentsArray.length; i++) {
+                    setTimeout(() => {
+                        cursor.before(contentsArray[i]);
+                        if (i === contentsArray.length - 1) {
+                            resolve();
+                        }
+                    }, i * delay);
+                }
+            });
+        }
+
+        const contentsArray = el.innerText.split("").map((letter) => {
+            const newSpan = document.createElement("span");
+            newSpan.innerText = letter;
+            return newSpan;
+        });
+        const cursor = document.createElement("span");
+        cursor.innerHTML = "█";
+        // cursor.style.fontSize = "0.9em";
+        el.innerText = "";
+        el.appendChild(cursor);
+        blinkCursor()
+            .then(typing)
+            .then(blinkCursor)
+            .then(() => cursor.remove());
     }
 };
