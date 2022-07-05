@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
 
 /* 
 CONTENTS: 
@@ -37,7 +38,7 @@ body {
     width: 100%;
     height: 60vh;
     margin-bottom: -5px;
-    font-family: "Rubik", monospace;
+    font-family: "Roboto Mono", monospace;
     font-weight: bold;
     background: linear-gradient(120deg, var(--darkergrey) 20%, rgba(0, 0, 0, 0) 70%);
     // border-top-left-radius: 10% 100%;
@@ -69,11 +70,19 @@ body {
 
 .title {
     color: var(--light);
-    background: linear-gradient(var(--light) 65%, var(--dark) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(var(--light) 65%, var(--dark) 100%);
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     font-size: 10rem;
+    letter-spacing: -0.1ch;
+
+    span {
+        display: inline-block;
+        width: 0.15em;
+        aspect-ratio: 1;
+        background-color: var(--light);
+    }
 }
 
 .subtitle {
@@ -317,6 +326,13 @@ p {
 #store-background {
     background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
         url("images/store.webp") top/100% no-repeat;
+    width: 100%;
+    min-height: 45rem;
+}
+
+#rps-background {
+    background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
+        url("images/r-p-s.webp") top/100% no-repeat;
     width: 100%;
     min-height: 45rem;
 }

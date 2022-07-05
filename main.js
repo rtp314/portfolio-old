@@ -1,3 +1,46 @@
+function typingAnimation(el, delay) {
+    function blinkCursor() {
+        return new Promise((resolve) => {
+            setTimeout(() => (cursor.style.opacity = 0), 500);
+            setTimeout(() => (cursor.style.opacity = 1), 1000);
+            setTimeout(() => (cursor.style.opacity = 0), 1500);
+            setTimeout(() => {
+                cursor.style.opacity = 1;
+                resolve();
+            }, 2000);
+        });
+    }
+
+    function typing() {
+        return new Promise((resolve) => {
+            for (let i = 0; i < contentsArray.length; i++) {
+                setTimeout(() => {
+                    cursor.before(contentsArray[i]);
+                    if (i === contentsArray.length - 1) {
+                        resolve();
+                    }
+                }, i * delay);
+            }
+        });
+    }
+
+    const contentsArray = el.innerText.split("").map((letter) => {
+        const newSpan = document.createElement("span");
+        newSpan.innerText = letter;
+        return newSpan;
+    });
+    const cursor = document.createElement("span");
+    cursor.innerHTML = "█";
+    // cursor.style.fontSize = "0.9em";
+    el.innerText = "";
+    el.appendChild(cursor);
+    blinkCursor()
+        .then(typing)
+        .then(blinkCursor)
+        .then(blinkCursor)
+        .then(() => cursor.remove());
+}
+
 window.onload = function () {
     const outer = document.getElementById("social-display");
     const inner = document.getElementById("social-info");
@@ -12,6 +55,7 @@ window.onload = function () {
     const d3 = document.getElementById("d3");
     const snake = document.getElementById("snake");
     const store = document.getElementById("store");
+    const rps = document.getElementById("rps");
 
     // const vadsbo = document.getElementById("vadsbo");
 
@@ -20,11 +64,12 @@ window.onload = function () {
     const d3Display = document.getElementById("d3-display");
     const snakeDisplay = document.getElementById("snake-display");
     const storeDisplay = document.getElementById("store-display");
+    const rpsDisplay = document.getElementById("rps-display");
 
     // const vadsboDisplay = document.getElementById("vadsbo-display");
 
-    const buttons = [social, calculator, d3, snake, store];
-    const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay, storeDisplay];
+    const buttons = [social, calculator, d3, snake, store, rps];
+    const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay, storeDisplay, rpsDisplay];
 
     const closableInfo = Array.from(document.getElementsByClassName("absolute"));
 
@@ -35,6 +80,7 @@ window.onload = function () {
     d3.addEventListener("click", () => closeOthers(d3Display));
     snake.addEventListener("click", () => closeOthers(snakeDisplay));
     store.addEventListener("click", () => closeOthers(storeDisplay));
+    rps.addEventListener("click", () => closeOthers(rpsDisplay));
 
     // vadsbo.addEventListener("click", () => closeOthers(vadsboDisplay));
 
@@ -50,50 +96,5 @@ window.onload = function () {
         });
     }
 
-    const subtitle = document.querySelector(".subtitle");
-    console.log(subtitle);
-
-    typingAnimation(subtitle, 100);
-
-    function typingAnimation(el, delay) {
-        function blinkCursor() {
-            return new Promise((resolve) => {
-                setTimeout(() => (cursor.style.opacity = 0), 500);
-                setTimeout(() => (cursor.style.opacity = 1), 1000);
-                setTimeout(() => (cursor.style.opacity = 0), 1500);
-                setTimeout(() => {
-                    cursor.style.opacity = 1;
-                    resolve();
-                }, 2000);
-            });
-        }
-
-        function typing() {
-            return new Promise((resolve) => {
-                for (let i = 0; i < contentsArray.length; i++) {
-                    setTimeout(() => {
-                        cursor.before(contentsArray[i]);
-                        if (i === contentsArray.length - 1) {
-                            resolve();
-                        }
-                    }, i * delay);
-                }
-            });
-        }
-
-        const contentsArray = el.innerText.split("").map((letter) => {
-            const newSpan = document.createElement("span");
-            newSpan.innerText = letter;
-            return newSpan;
-        });
-        const cursor = document.createElement("span");
-        cursor.innerHTML = "█";
-        // cursor.style.fontSize = "0.9em";
-        el.innerText = "";
-        el.appendChild(cursor);
-        blinkCursor()
-            .then(typing)
-            .then(blinkCursor)
-            .then(() => cursor.remove());
-    }
+    typingAnimation(document.querySelector(".subtitle"), 100);
 };
