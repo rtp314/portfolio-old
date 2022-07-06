@@ -40,7 +40,8 @@ body {
     margin-bottom: -5px;
     font-family: "Roboto Mono", monospace;
     font-weight: bold;
-    background: linear-gradient(120deg, var(--darkergrey) 20%, rgba(0, 0, 0, 0) 70%);
+    // background: linear-gradient(120deg, var(--darkergrey) 20%, rgba(0, 0, 0, 0) 70%);
+    background: linear-gradient(120deg, black 20%, rgba(0, 0, 0, 0) 70%);
     // border-top-left-radius: 10% 100%;
     // border-bottom-right-radius: 20% 100%;
     position: relative;
@@ -74,7 +75,7 @@ body {
     // background-clip: text;
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
-    font-size: 10rem;
+    font-size: 8rem;
     letter-spacing: -0.1ch;
 
     span {
