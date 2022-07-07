@@ -7,7 +7,47 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite App</title>
+        <meta name="description" content="Samuel Reed's Github Portfolio Page for Web Development" />
+        <title>Samuel Reed Coding</title>
+        <link rel="stylesheet" href="style.scss" />
+        <script type="module" src="/main.js" defer></script>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </head>
-    <body></body>
+    <body>
+        <nav id="navbar">
+            <ul>
+                <a href="#about"><li>{ About }</li></a>
+                <a href="#projects"><li>{ Projects }</li></a>
+                <a href="#contact"><li>{ Contact }</li></a>
+            </ul>
+        </nav>
+        <div id="banner">
+            <div id="title-wrapper">
+                <div class="title"><span></span>/src/</div>
+                <div class="subtitle">Samuel Reed Coding</div>
+            </div>
+        </div>
+        <main>
+            <section>
+                <div class="feature color1">
+                    <span class="feature-title">Design without Limits</span>
+                    <br /><span class="feature-subtitle"
+                        >Let me handle the details, so you can focus on the big picture</span
+                    >
+                </div>
+            </section>
+            <section id="projects">
+                <div class="project-sidebar">
+                    <ul>
+                        <li class="selected">Store</li>
+                        <li>R/P/S</li>
+                        <li>Social</li>
+                        <li>Snake</li>
+                        <li>D3.js</li>
+                    </ul>
+                </div>
+                <div class="project-display"></div>
+            </section>
+        </main>
+    </body>
 </html>

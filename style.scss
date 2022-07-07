@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
+
+:root {
+    --color-primary-900: black;
+    --color-primary-800: #252526;
+    --color-primary-700: #333333;
+    --color-primary-300: #eee;
+    --color-primary-100: #fdfdf7;
+    --color-accent-400: #2490f1;
+    --color-alt-1: #c586c0;
+    --color-alt-2: #d0dc90;
+
+    --color-background: var(--color-primary-100);
+    --color-nav: var(--color-accent-400);
+    --color-background-nav: var(--color-primary-900);
+    --color-faint: var(--color-primary-300);
+
+    --fs-title: 7rem;
+    --fs-subheading: 3rem;
+    --fs-nav: 1.3rem;
+    --fs-body: 1rem;
+
+    --ff-body: "Ubuntu";
+    --ff-heading: "Encode Sans";
+    --ff-title: "Roboto Mono";
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        --fs-title: 5rem;
+        --fs-subheading: 2rem;
+        --fs-nav: 1rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: var(--ff-body);
+}
+
+// NAVBAR
+
+nav {
+    font-size: var(--fs-nav);
+    font-family: var(--ff-heading);
+    color: var(--color-nav);
+    background-color: var(--color-background-nav);
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.3);
+    z-index: 5;
+
+    & > ul {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 80rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    li {
+        margin: 0.5em 2em;
+        padding: 0;
+        display: inline-block;
+        font-size: var(--fs-nav);
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    a {
+        color: currentColor;
+        text-decoration: none;
+    }
+}
+
+.feature {
+    margin: 6rem 2rem;
+    // display: flex;
+    // flex-direction: column;
+    position: relative;
+    display: inline-block;
+    font-family: var(--ff-heading);
+
+    &::before {
+        content: "{";
+        position: absolute;
+        left: 5rem;
+        top: -5rem;
+        font-size: 10rem;
+        color: var(--color-faint);
+        z-index: -1;
+    }
+
+    &::after {
+        content: "}";
+        position: absolute;
+        right: 5rem;
+        bottom: -5rem;
+        font-size: 10rem;
+        color: var(--color-faint);
+        z-index: -2;
+    }
+
+    .feature-title {
+        font-size: var(--fs-subheading);
+        position: relative;
+        font-weight: bold;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0 0.2em;
+            background-color: var(--accent-color);
+            transform-origin: 0% 90%;
+            transform: scaleY(0.3);
+            transition: transform 500ms;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        &:hover::after {
+            transform: scaleY(0.9);
+        }
+    }
+    .feature-subtitle {
+        margin-top: 0.5rem;
+        display: block;
+        font-size: var(--fs-body);
+        text-align: end;
+    }
+}
+
+#projects {
+    background-color: var(--color-primary-300);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0;
+
+    .project-sidebar {
+        flex-basis: 10rem;
+        flex-grow: 1;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            padding: 1em;
+            display: inline-block;
+            flex-basis: 7rem;
+            flex-grow: 1;
+
+            &:hover {
+                background-color: var(--color-background);
+            }
+        }
+    }
+
+    .project-display {
+        background-color: var(--color-background);
+        flex-basis: 60rem;
+        flex-grow: 10;
+        min-height: 10rem;
+        padding: 1rem;
+    }
+
+    .selected {
+        background-color: var(--color-background);
+        font-weight: bold;
+    }
+}
+
+/* UTILITY CLASSES */
+
+.flex-between {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.color1 {
+    --accent-color: var(--color-accent-400);
+}
+.color2 {
+    --accent-color: var(--color-alt-1);
+}
+.color3 {
+    --accent-color: var(--color-alt-2);
+}
