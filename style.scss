@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
 
 :root {
@@ -18,10 +18,11 @@
 
     --fs-title: 7rem;
     --fs-subheading: 3rem;
+    --fs-subsubheading: 1.5rem;
     --fs-nav: 1.3rem;
-    --fs-body: 1rem;
+    --fs-body: 1.2rem;
 
-    --ff-body: "Ubuntu";
+    --ff-body: "Encode Sans";
     --ff-heading: "Encode Sans";
     --ff-title: "Roboto Mono";
 }
@@ -32,6 +33,11 @@
         --fs-subheading: 2rem;
         --fs-nav: 1rem;
     }
+}
+
+html {
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -48,6 +54,11 @@ li {
 body {
     background-color: var(--color-background);
     font-family: var(--ff-body);
+}
+
+p {
+    max-width: 60ch;
+    font-size: var(--fs-body);
 }
 
 // NAVBAR
@@ -90,13 +101,36 @@ nav {
     }
 }
 
+// SECTION
+
+section {
+    max-width: 80rem;
+    margin: 3rem auto;
+
+    p {
+        margin: 1rem 2rem;
+    }
+}
+
+.feature-wrapper {
+    justify-content: center;
+
+    & > * {
+        flex-basis: 40%;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+}
+
 .feature {
     margin: 6rem 2rem;
-    // display: flex;
-    // flex-direction: column;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     font-family: var(--ff-heading);
+    max-width: 40rem;
 
     &::before {
         content: "{";
@@ -122,6 +156,8 @@ nav {
         font-size: var(--fs-subheading);
         position: relative;
         font-weight: bold;
+        padding-right: 1em;
+        min-width: max-content;
 
         &::after {
             content: "";
@@ -142,14 +178,20 @@ nav {
     .feature-subtitle {
         margin-top: 0.5rem;
         display: block;
-        font-size: var(--fs-body);
-        text-align: end;
+        font-size: var(--fs-subsubheading);
+        align-self: flex-end;
+        padding-left: 1em;
     }
 }
 
+//PROJECTS
+
 #projects {
+    margin: 5rem 0;
     background-color: var(--color-primary-300);
     width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -172,6 +214,14 @@ nav {
             display: inline-block;
             flex-basis: 7rem;
             flex-grow: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.4em;
+            border-bottom: 1px solid var(--color-background);
+
+            &:first-child {
+                border-top: 1px solid var(--color-background);
+            }
 
             &:hover {
                 background-color: var(--color-background);
@@ -179,12 +229,35 @@ nav {
         }
     }
 
-    .project-display {
+    #project-display-panel {
         background-color: var(--color-background);
         flex-basis: 60rem;
-        flex-grow: 10;
+        flex-grow: 20;
         min-height: 10rem;
         padding: 1rem;
+
+        & > div {
+            position: relative;
+            display: none;
+        }
+    }
+
+    .text-bottom {
+        position: absolute;
+        bottom: 1em;
+        left: 2em;
+        width: 60%;
+    }
+
+    .project-info {
+        position: absolute;
+        inset: 0;
+        padding: 1em 3em;
+        background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%);
+    }
+
+    .screenshot {
+        width: min(50rem, 100%);
     }
 
     .selected {
@@ -195,11 +268,23 @@ nav {
 
 /* UTILITY CLASSES */
 
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reverse {
+    flex-wrap: wrap-reverse;
+}
+
 .flex-between {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .color1 {
@@ -210,4 +295,14 @@ nav {
 }
 .color3 {
     --accent-color: var(--color-alt-2);
+}
+
+.icon-small {
+    height: 1.2em;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
