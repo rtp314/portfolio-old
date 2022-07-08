@@ -54,25 +54,6 @@ function typingAnimation(el, delay) {
 //PROJECT DISPLAY LOGIC
 
 const display = document.getElementById("project-display");
-
-// const social = document.getElementById("social");
-// const calculator = document.getElementById("calculator");
-// const d3 = document.getElementById("d3");
-// const snake = document.getElementById("snake");
-// const store = document.getElementById("store");
-// const rps = document.getElementById("rps");
-
-// const buttons = [social, calculator, d3, snake, store, rps];
-
-// const calculatorDisplay = document.getElementById("calculator-display");
-// const socialDisplay = document.getElementById("social-display");
-// const d3Display = document.getElementById("d3-display");
-// const snakeDisplay = document.getElementById("snake-display");
-// const storeDisplay = document.getElementById("store-display");
-// const rpsDisplay = document.getElementById("rps-display");
-
-// const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay, storeDisplay, rpsDisplay];
-
 const closableInfo = Array.from(document.getElementsByClassName("closable-info"));
 const buttons = Array.from(document.getElementsByClassName("project-button"));
 const displays = Array.from(document.getElementsByClassName("project-display"));
@@ -82,30 +63,29 @@ closableInfo.forEach((div) => div.addEventListener("click", () => (div.style.dis
 buttons.forEach((el) => el.addEventListener("click", handleProjectChange));
 
 function handleProjectChange(e) {
+    function closeOthers(focused) {
+        displays.forEach((element) => {
+            if (element === focused) {
+                element.style.display = "block";
+                element.scrollIntoView({ behavior: "smooth" });
+            } else {
+                element.style.display = "none";
+            }
+            closableInfo.forEach((div) => (div.style.display = "block"));
+        });
+    }
+
+    function setSelectedButton(el) {
+        buttons.forEach((button) => {
+            if (button === el) {
+                button.classList.add("selected");
+            } else {
+                button.classList.remove("selected");
+            }
+        });
+    }
     const projectName = e.currentTarget.id;
     const projectDisplay = document.getElementById(projectName + "-display");
     closeOthers(projectDisplay);
-    setButtonStyle(e.currentTarget);
-}
-
-function closeOthers(focused) {
-    displays.forEach((element) => {
-        if (element === focused) {
-            element.style.display = "block";
-            element.scrollIntoView({ behavior: "smooth" });
-        } else {
-            element.style.display = "none";
-        }
-        closableInfo.forEach((div) => (div.style.display = "block"));
-    });
-}
-
-function setButtonStyle(el) {
-    buttons.forEach((button) => {
-        if (button === el) {
-            button.classList.add("selected");
-        } else {
-            button.classList.remove("selected");
-        }
-    });
+    setSelectedButton(e.currentTarget);
 }
