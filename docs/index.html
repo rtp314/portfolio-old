@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.8b3a043e.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABMVJREFUWEelV30ormcY/914J2JDHKKkxJHiLGXFmlpKhsLxbYeE+Qr/0NL2D6VkKyUfE/OVybc52x8SrVBO2PG9YWvJR5mMQni3dzzrus/7vL3v6/l4d1x/Ps91Xffvvj5/N4OFIgiCG4B4AB8DeF+n0/loNBp7vfk1gD0AqwB+AvADY+zcEtdMTUkQhGAAX+h0uuddXV2agYEBrK2t4f7+HpeXl3LmfwMYBlDHGNtWOkMWgCAI7wL4CsBnWq3WKjo6GrOzswZfDg4OuLq6UsP/L4AWAF8yxihKD0QSgCAIQQC+B+BLFk1NTSgvL+fGycnJyMvLg6+vL/z8/NQAiP9/BZDIGPvN3OABAEEQPgLwI4D3ROXMzExQ6D09PXF4eAgrKytLDzbW+wvAJ4yxn40/mgDQ33wOgJOxUkpKCkZHR+Ht7Y39/f23OVy0OQXwIWPsd/GDAYA+5yti2I1PobCPjY3B1dUVp6fk41GyBeADxtgteTEG0AagUMp1YmIiJiYm4OjoqFT5/wfV14yxzw0A9K1Gt7eW8hIREYH5+Xl4eXnh6OjIRKWsrIx3h7+/P+Li4pCRkQFbW1s1MP8ACGSM/cEjIAjCAIB0Kau7uzu4u7vj7OwMkZGRmJmZMVFLT0/H0NCQ4VtQUBCmp6e5jYq0M8YKmX7C0bXekTJob29HYeGbzLS0tKCkpMREbWVlBevr65icnMTIyAj/l52djd7eXjUANBc8CEAegG/NtWnIREVFYXFxkSKEZ8+e4dWrV7Czs5N1nJSUhPHxcXh4eOD4+FgNAP1PJQDfAfjUXJtCTlVPYmNjg7m5OYSFhSk6LS4uRltbG1xcXHjKLJBvCMAvVBDmyre3t6isrERfXx8fuZTTzc1NuLnRTpKW0tJSniZnZ2ecn1u0ixYJAOVC3GoPPE9NTYH2AEldXR2qqqpkAVRUVKChoQH29va4vpYc/ea2fxIAQSlU9JtuTSGNj4/n80BOqqurUVNTA2tra1AENRqNWhZuVQGQh/DwcF6AoaGhWFpaknXa3d2N3Nxc/n9jYwPUkirCASimgBzExMTwNgsICMD2tvx6393d5ToktD0bGxvVAPAUSBahsaXYXk+fPsXOzo6i04SEBLx8+ZLrUBvX1tbyyMkIL0LJNjQ2ELchjVu6pZJcXFwgODgYBwcHXI3SkpOTI2fC21ByEBlb0GSjdqS5QI6VhlF+fj46Ozu5OdVAc3MzaJfICB9E1Niyo5gMh4eHkZaWxn0EBgaCCAqxodTUVBO/W1tbhsIj0D09PWBMlvW9GcXkQWkZ6f/zoqLbiCLFCevr6w1z4vXr1wgJCVHK1ptlpD+AmK/sOha9LC8vY3BwEKurq9BqtVhYWDA5QAw/UbabmxultWy6jvUgZAmJWi+J/0XuSDVCABTElJDoARANl6RklgIQi1VlF0hTMj0IGl0PSKmlAAoKCtDR0aG0DeVJqXiIFC23FMCLFy/Q39+PJ0+e4OTkxNxMnZYbgTB5mCgB2Nvb49ORRnVrayuIwhGLFtmR3tbyh4kRCMPTDIDsS8ScE9LbgUiqj48PuXq7p5nxjcXHKYDnAB7s16ysLBBnoD0RGxuLoqIiODk5Pf5xah528+c5ALrio5/n/wEL2QdTW5C6jwAAAABJRU5ErkJggg==" />
+		<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAiBJREFUOE99kz1oWlEUx3+XDiEUQqaMgRJcRSIFh0RCCH4sTgoGJQ0YCAQaCAGzOAacogSSQosUBRfzIW/QResSJw3FJUNBEKJLBgcdog2WvnJffI+nkd7l8e7/nN8959z/FUwtVVU/Pjw87CuKsul0OpedTqeMeAQqwFchxE9zitB/VFV9D1x2Op0dq9Uq7HY70WgUl8tljleB78BnIcRQChpgnPwDcNzc3BCJROj1eghh8KcLrQJuCdEBaeCTjMrlcuzu7jIcagf8b30TQuwL2TNQ06u5uLjg9PSUp6cnLXl9fV37xuNx1tbWzMC/wKoEpICIVO7v7wmHw3g8Hs7Pz7XgZrNJMpmkUCjQbrenK/oiAS3gg1Tk6UdHR9ze3uLz+YzgYrFIIBBgMBhMA35JwB/gna4cHx9TrVap1+tGcKVSwe12MxqNpgf7+w0gk8lwcnJizEBSWq0WKysrNBoNbDabuQoNYLQglaurKw4ODuh2uxPlBoNBSqUStVoNi8Wia1oLxhDl7t3dHVtbW2SzWTY2NlhaWuL5+VlL8nq9nJ2dsbi4qAO0IU5co1QSiQTpdJq9vT0ODw8pl8uaI/v9PgsLC3ry6zWOnWgYaZZz8vk829vbvLy8mOVXI40B8h1oVp4FUBSFUCiktTJek1Y2QS6BHd2Vcj8WiyFvxuFwcH19PfsxmU8dz2Qf2ASWU6kU8/Pzj36/vzI3N/fmOf8DidLmHbER7CwAAAAASUVORK5CYII=" />
+		<link rel="manifest" href="data:application/manifest+json;base64,ew0KICAgICJuYW1lIjogIlNhbXVlbCBSZWVkIENvZGluZyIsDQogICAgInNob3J0X25hbWUiOiAiU2FtdWVsIFJlZWQgQ29kaW5nIiwNCiAgICAiaWNvbnMiOiBbDQogICAgICAgIHsgInNyYyI6ICIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyIgfSwNCiAgICAgICAgeyAic3JjIjogIi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiB9DQogICAgXSwNCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsDQogICAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsDQogICAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSINCn0NCg==" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Samuel Reed's Github Portfolio Page for Web Development" />
+		<title>Samuel Reed Coding</title>
+		
+		
+		<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+		<script type="module" crossorigin src="/assets/index.7ebec4f2.js"></script>
+		<link rel="stylesheet" href="/assets/index.1c08654c.css">
+	</head>
+	<body>
+		<nav id="navbar">
+			<ul>
+				<nobr
+					><a href="#about"><li>{ About }</li></a></nobr
+				>
+				<nobr
+					><a href="#projects"><li>{ Projects }</li></a></nobr
+				>
+				<nobr
+					><a href="#contact"><li>{ Contact }</li></a></nobr
+				>
+			</ul>
+		</nav>
+		<div id="banner">
+			<div id="title-wrapper">
+				<div class="title"><span></span>/src/</div>
+				<div class="subtitle">Samuel Reed Coding</div>
+			</div>
+			<div id="cta-wrapper">
+				<div>Frontend Development</div>
+				<a href="#contact" class="button">Contact</a>
+			</div>
+		</div>
+		<main>
+			<section>
+				<div class="flex feature-wrapper">
+					<div class="feature color1">
+						<span class="feature-title">Design without Limits</span>
+						<br /><span class="feature-subtitle"
+							>Let me handle the details, so you can focus on the big picture</span
+						>
+					</div>
+					<p>
+						Freelance Javascript web developer, specialising in building interactive websites and single
+						page apps with React.js
+					</p>
+				</div>
+			</section>
+			<section id="projects">
+				<div class="project-sidebar">
+					<ul>
+						<li id="social" class="selected project-button">
+							<img alt="social icon" class="icon-small" src="/assets/letter-s-svgrepo-com.8cc175fc.svg" />
+							<span>Social</span>
+						</li>
+						<li id="rps" class="project-button">
+							<img alt="rock paper scissors icon" class="icon-small" src="/assets/icon-scissors.f778df73.svg" />
+							<span>R/P/S</span>
+						</li>
+						<li id="store" class="project-button">
+							<img alt="social icon" class="icon-small" src="/assets/cart-svgrepo-com.a2dd1f70.svg" />
+							<span>Store</span>
+						</li>
+						<li id="calculator" class="project-button">
+							<img alt="calculator icon" src="/assets/calculator-svgrepo-com.ee744dda.svg" class="icon-small" /><span
+								>Calculator</span
+							>
+						</li>
+						<!-- <li id="vadsbo">Vadsbo</li> -->
+						<li id="d3" class="project-button">
+							<img alt="d3 logo" class="icon-small" src="/assets/d3-js-svgrepo-com.d5238419.svg" />
+							<span>D3.js</span>
+						</li>
+						<li id="snake" class="project-button">
+							<img alt="snake icon" src="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMMOAADDDgAAAAAAAAAAAAD////////////////////////////////////////////////9/f7/29ny/4aC2f+wrev/9PP/////////////////////////////////////////////////////////////397z/0M8w/8eFtf/KyPq/5WR9v///////////////////////////////////////////////////////////5SQ4P8dFdj/JBvt/yYe7f9EPfD/6un9///////q8ub/6vLm/+ry5v/q8ub/6fLm//T58/////////////////+7uPf/KiLt/yYe7f9PSPD/bmnz//X0/v//////Wqw4/1qsOP9arDj/Wqw4/1eqNP+t1Zv/////////////////9PP+/5SQ9v9EPvD/bmnz/8vJ+////////////0evHP9Hrxz/SLAd/0uxIP9Hrxz/pdiQ///////////////////////9/f//7Or///Tz//////////////////+m2JH/ptiR/5vShP9Tri3/SK8d/6bYkf//////////////////////z+PG/5/Ki/+r0Zv/9fnz///////////////////////q8ub/Wqw4/0evHP+m2JH//////////////////////57JjP9ApRb/W7Q2/+v25v//////////////////////6vLm/1qsOP9Hrxz/ptiR//////////////////////+gyo7/Rqsb/2C6Ov/s9+f//////////////////////+ry5v9arDj/R68c/6bYkf//////////////////////oMqO/0WqG/9gujr/6/fn///////////////////////q8ub/Wqw4/0evHP+m2JH//////////////////////6DKjv9Fqhv/YLo6/+v35///////////////////////6vLm/1qsOP9IsB3/m9KE/+3z6v/q8ub/6vLm/+306v+VxIL/Rqsc/2C6Ov/r9+f//////////////////////+ry5v9arDj/S7Eg/1OuLf9arDj/Wqw4/1qsOP9arDj/UKgs/0quIP9gujr/6/fn///////////////////////p8ub/V6o0/0evHP9Irx3/R68c/0evHP9Hrxz/R68c/0iwHf9Hrxz/XLg2/+v25v//////////////////////9Pnz/63WnP+m2JH/ptiR/6bYkf+m2JH/ptiR/6bYkf+m2JH/ptiR/7Ddnf/1+/P/////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" class="icon-small" /><span>Snake!</span>
+						</li>
+					</ul>
+				</div>
+				<div id="project-display-panel">
+					<div id="snake-display" class="project-display">
+						<div class="project-info closable-info">
+							<div class="text-bottom">
+								<h3>{ Snake! }</h3>
+								<p>A simple snake clone</p>
+								<p>
+									Every programmer needs to build a snake clone. I build this over the course of an
+									afternoon as my first foray into game programming.
+								</p>
+								<p>Try adjusting the game options at the bottom of the page.</p>
+								<p class="bold">Technologies used: Vanilla HTML and Javascript</p>
+								<p>Click to close this information and explore the code</p>
+							</div>
+						</div>
+						<p
+							class="codepen"
+							data-height="850"
+							data-theme-id="dark"
+							data-default-tab="js,result"
+							data-slug-hash="rNJowZv"
+							data-user="reversethepolarity"
+							style="
+								height: 100%;
+								box-sizing: border-box;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								border: 2px solid;
+								margin: 1em 0;
+								padding: 1em;
+							"
+						>
+							<span
+								>See the Pen <a href="https://codepen.io/reversethepolarity/pen/rNJowZv"> Snake!</a> by
+								Samuel (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>) on
+								<a href="https://codepen.io">CodePen</a>.</span
+							>
+						</p>
+					</div>
+					<div id="calculator-display" class="project-display">
+						<div class="project-info closable-info">
+							<div class="text-bottom">
+								<h3>{ Calculator }</h3>
+								<p>Calculator App built with React Components</p>
+								<p>
+									Handles basic arithmetic as well as exponentials. Detects and prevents input
+									overflows. I originally created this with plain Javascript, then with React
+									Components, then again with React Hooks.
+								</p>
+								<p class="bold">Technologies used: React Components</p>
+								<p>Click to close this information and explore the code</p>
+							</div>
+						</div>
+						<p
+							class="codepen"
+							data-height="850"
+							data-theme-id="dark"
+							data-default-tab="js,result"
+							data-slug-hash="GROjpev"
+							data-user="reversethepolarity"
+							style="
+								height: 100%;
+								box-sizing: border-box;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								border: 2px solid;
+								margin: 1em 0;
+								padding: 1em;
+							"
+						>
+							<span
+								>See the Pen
+								<a href="https://codepen.io/reversethepolarity/pen/GROjpev"> React Calculator</a>
+								by Samuel (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>) on
+								<a href="https://codepen.io">CodePen</a>.</span
+							>
+						</p>
+					</div>
+					<div id="d3-display" class="project-display">
+						<div class="project-info closable-info">
+							<div class="text-bottom">
+								<h3>{ D3.js }</h3>
+								<p>Data visualisation using D3.js</p>
+								<p>
+									Pulls historical temperature data from an API and programmatically creates a heatmap
+									charting temperature by year. This is one of several D3 projects you can see on my
+									Codepen account.
+								</p>
+								<p class="bold">Technologies used: D3.js, fetch API</p>
+								<p>Click to close this information and explore the code</p>
+							</div>
+						</div>
+						<p
+							class="codepen"
+							data-height="850"
+							data-theme-id="dark"
+							data-default-tab="js,result"
+							data-slug-hash="YzEKwJr"
+							data-user="reversethepolarity"
+							style="
+								height: 100%;
+								box-sizing: border-box;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								border: 2px solid;
+								margin: 1em 0;
+								padding: 1em;
+							"
+						>
+							<span
+								>See the Pen
+								<a href="https://codepen.io/reversethepolarity/pen/YzEKwJr"> Heat Map</a> by Samuel (<a
+									href="https://codepen.io/reversethepolarity"
+									>@reversethepolarity</a
+								>) on <a href="https://codepen.io">CodePen</a>.</span
+							>
+						</p>
+					</div>
+					<div id="social-display" style="display: block" class="project-display">
+						<div class="project-info socialbackground">
+							<div class="text-bottom">
+								<h3>{ Social }</h3>
+
+								<p>A simple social networking website, built using React and Firestore.</p>
+								<p class="bold">Technologies used: React (with Hooks), React Router, Firestore</p>
+								<p>
+									Login using your GMail, or use one of the premade test accounts. Post a message, and
+									open the chat in the sidebar. This is very much still a work in progress, but it has
+									been a very useful learning experience.
+								</p>
+								<p>
+									Visit the app at
+									<a href="https://social-rtp.herokuapp.com/" target="_blank"
+										>social-rtp.herokuapp.com/</a
+									>
+								</p>
+								<p>Please be patient, Heroku can be slow to start up</p>
+							</div>
+						</div>
+					</div>
+					<div id="rps-display" class="project-display">
+						<div class="project-info rps-background">
+							<div id="rps-info" class="text-bottom">
+								<h3>{ Rock Paper Scissors }</h3>
+
+								<p>The classic game, built using React and packaged with Vite</p>
+								<p class="bold">Technologies used: React, Vite</p>
+								<p>
+									A fun project using an idea and assets from frontendmentor.io. It gave me lots of
+									opportunity to work on CSS animations and making a satisfying user experience.
+								</p>
+								<p>
+									Visit the app at
+									<a href="http://rtp-projects.epizy.com/rock-paper-scissors/" target="_blank"
+										>rtp-projects.epizy.com/rock-paper-scissors</a
+									>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div id="store-display" class="project-display">
+						<div class="project-info store-background">
+							<div id="store-info" class="text-bottom">
+								<h3>{ Store }</h3>
+
+								<p>
+									A simple e-commerce storefront. Client built with React, backend built with Node and
+									Stripe
+								</p>
+								<p class="bold">Technologies used: React, Node.js, Express, Stripe</p>
+								<p>
+									Add some items to your cart, then use card 4242 4242 4242 4242, CVC 424 to complete
+									a test purchase.
+								</p>
+								<p>
+									Visit the app at
+									<a href="https://store-rtp314.herokuapp.com/" target="_blank"
+										>store-rtp314.herokuapp.com/</a
+									>
+								</p>
+								<p>Please be patient, Heroku can be slow to start up</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="contact">
+				<div class="flex feature-wrapper reverse">
+					<div>
+						<p>
+							Contact me by email or on LinkedIn. I'll be happy to talk about making your next project
+							come to life.
+						</p>
+						<p>
+							Email:
+							<a href="mailto:samuelreed01@gmail.com">samuelreed01@gmail.com</a>
+						</p>
+						<p>
+							LinkedIn:
+							<a href="https://www.linkedin.com/in/samuelreed01/">linkedin.com/in/samuelreed01/</a>
+						</p>
+					</div>
+					<div class="feature color3">
+						<span class="feature-title">Design without Limits</span>
+						<br /><span class="feature-subtitle"
+							>Let me handle the details, so you can focus on the big picture</span
+						>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>Site hand coded by Samuel Reed using free-range, organic HTML/CSS/JS</footer>
+	</body>
+</html>

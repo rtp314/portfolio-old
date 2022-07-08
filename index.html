@@ -1,308 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Samuel Reed's Github Portfolio Page for Web Development" />
-        <title>Samuel Reed Coding</title>
-        <link rel="stylesheet" href="style.scss" />
-        <script type="module" src="/main.js" defer></script>
-        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-    </head>
-    <body>
-        <nav id="navbar">
-            <ul>
-                <nobr
-                    ><a href="#about"><li>{ About }</li></a></nobr
-                >
-                <nobr
-                    ><a href="#projects"><li>{ Projects }</li></a></nobr
-                >
-                <nobr
-                    ><a href="#contact"><li>{ Contact }</li></a></nobr
-                >
-            </ul>
-        </nav>
-        <div id="banner">
-            <div id="title-wrapper">
-                <div class="title"><span></span>/src/</div>
-                <div class="subtitle">Samuel Reed Coding</div>
-            </div>
-            <div id="cta-wrapper">
-                <div>Frontend Development</div>
-                <a href="#contact" class="button">Contact</a>
-            </div>
-        </div>
-        <main>
-            <section>
-                <div class="flex feature-wrapper">
-                    <div class="feature color1">
-                        <span class="feature-title">Design without Limits</span>
-                        <br /><span class="feature-subtitle"
-                            >Let me handle the details, so you can focus on the big picture</span
-                        >
-                    </div>
-                    <p>
-                        Freelance Javascript web developer, specialising in building interactive websites and single
-                        page apps with React.js
-                    </p>
-                </div>
-            </section>
-            <section id="projects">
-                <div class="project-sidebar">
-                    <ul>
-                        <li id="social" class="selected project-button">
-                            <img alt="social icon" class="icon-small" src="icons/letter-s-svgrepo-com.svg" />
-                            <span>Social</span>
-                        </li>
-                        <li id="rps" class="project-button">
-                            <img alt="rock paper scissors icon" class="icon-small" src="icons/icon-scissors.svg" />
-                            <span>R/P/S</span>
-                        </li>
-                        <li id="store" class="project-button">
-                            <img alt="social icon" class="icon-small" src="icons/cart-svgrepo-com.svg" />
-                            <span>Store</span>
-                        </li>
-                        <li id="calculator" class="project-button">
-                            <img alt="calculator icon" src="icons/calculator-svgrepo-com.svg" class="icon-small" /><span
-                                >Calculator</span
-                            >
-                        </li>
-                        <!-- <li id="vadsbo">Vadsbo</li> -->
-                        <li id="d3" class="project-button">
-                            <img alt="d3 logo" class="icon-small" src="icons/d3-js-svgrepo-com.svg" />
-                            <span>D3.js</span>
-                        </li>
-                        <li id="snake" class="project-button">
-                            <img alt="snake icon" src="icons/snake_icon.ico" class="icon-small" /><span>Snake!</span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="project-display-panel">
-                    <div id="snake-display" class="project-display">
-                        <div class="project-info closable-info">
-                            <div class="text-bottom">
-                                <h4>{ Snake! }</h4>
-                                <p>A simple snake clone</p>
-                                <p>
-                                    Every programmer needs to build a snake clone. I build this over the course of an
-                                    afternoon as my first foray into game programming.
-                                </p>
-                                <p>Try adjusting the game options at the bottom of the page.</p>
-                                <p class="bold">Technologies used: Vanilla HTML and Javascript</p>
-                                <p>Click to close this information and explore the code</p>
-                            </div>
-                        </div>
-                        <p
-                            class="codepen"
-                            data-height="850"
-                            data-theme-id="dark"
-                            data-default-tab="js,result"
-                            data-slug-hash="rNJowZv"
-                            data-user="reversethepolarity"
-                            style="
-                                height: 100%;
-                                box-sizing: border-box;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                border: 2px solid;
-                                margin: 1em 0;
-                                padding: 1em;
-                            "
-                        >
-                            <span
-                                >See the Pen <a href="https://codepen.io/reversethepolarity/pen/rNJowZv"> Snake!</a> by
-                                Samuel (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>) on
-                                <a href="https://codepen.io">CodePen</a>.</span
-                            >
-                        </p>
-                    </div>
-                    <div id="calculator-display" class="project-display">
-                        <div class="project-info closable-info">
-                            <div class="text-bottom">
-                                <h4>{ Calculator }</h4>
-                                <p>Calculator App built with React Components</p>
-                                <p>
-                                    Handles basic arithmetic as well as exponentials. Detects and prevents input
-                                    overflows. I originally created this with plain Javascript, then with React
-                                    Components, then again with React Hooks.
-                                </p>
-                                <p class="bold">Technologies used: React Components</p>
-                                <p>Click to close this information and explore the code</p>
-                            </div>
-                        </div>
-                        <p
-                            class="codepen"
-                            data-height="850"
-                            data-theme-id="dark"
-                            data-default-tab="js,result"
-                            data-slug-hash="GROjpev"
-                            data-user="reversethepolarity"
-                            style="
-                                height: 100%;
-                                box-sizing: border-box;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                border: 2px solid;
-                                margin: 1em 0;
-                                padding: 1em;
-                            "
-                        >
-                            <span
-                                >See the Pen
-                                <a href="https://codepen.io/reversethepolarity/pen/GROjpev"> React Calculator</a>
-                                by Samuel (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>) on
-                                <a href="https://codepen.io">CodePen</a>.</span
-                            >
-                        </p>
-                    </div>
-                    <div id="d3-display" class="project-display">
-                        <div class="project-info closable-info">
-                            <div class="text-bottom">
-                                <h4>{ D3.js }</h4>
-                                <p>Data visualisation using D3.js</p>
-                                <p>
-                                    Pulls historical temperature data from an API and programmatically creates a heatmap
-                                    charting temperature by year. This is one of several D3 projects you can see on my
-                                    Codepen account.
-                                </p>
-                                <p class="bold">Technologies used: D3.js, fetch API</p>
-                                <p>Click to close this information and explore the code</p>
-                            </div>
-                        </div>
-                        <p
-                            class="codepen"
-                            data-height="850"
-                            data-theme-id="dark"
-                            data-default-tab="js,result"
-                            data-slug-hash="YzEKwJr"
-                            data-user="reversethepolarity"
-                            style="
-                                height: 100%;
-                                box-sizing: border-box;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                border: 2px solid;
-                                margin: 1em 0;
-                                padding: 1em;
-                            "
-                        >
-                            <span
-                                >See the Pen
-                                <a href="https://codepen.io/reversethepolarity/pen/YzEKwJr"> Heat Map</a> by Samuel (<a
-                                    href="https://codepen.io/reversethepolarity"
-                                    >@reversethepolarity</a
-                                >) on <a href="https://codepen.io">CodePen</a>.</span
-                            >
-                        </p>
-                    </div>
-                    <div id="social-display" style="display: block" class="project-display">
-                        <div class="project-info">
-                            <div id="social-info" class="text-bottom">
-                                <h4>{ Social }</h4>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Samuel Reed's Github Portfolio Page for Web Development" />
+		<title>Samuel Reed Coding</title>
+		<link rel="stylesheet" href="/style.scss" />
+		<script type="module" src="/main.js" defer></script>
+		<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+	</head>
+	<body>
+		<nav id="navbar">
+			<ul>
+				<nobr
+					><a href="#about"><li>{ About }</li></a></nobr
+				>
+				<nobr
+					><a href="#projects"><li>{ Projects }</li></a></nobr
+				>
+				<nobr
+					><a href="#contact"><li>{ Contact }</li></a></nobr
+				>
+			</ul>
+		</nav>
+		<div id="banner">
+			<div id="title-wrapper">
+				<div class="title"><span></span>/src/</div>
+				<div class="subtitle">Samuel Reed Coding</div>
+			</div>
+			<div id="cta-wrapper">
+				<div>Frontend Development</div>
+				<a href="#contact" class="button">Contact</a>
+			</div>
+		</div>
+		<main>
+			<section>
+				<div class="flex feature-wrapper">
+					<div class="feature color1">
+						<span class="feature-title">Design without Limits</span>
+						<br /><span class="feature-subtitle"
+							>Let me handle the details, so you can focus on the big picture</span
+						>
+					</div>
+					<p>
+						Freelance Javascript web developer, specialising in building interactive websites and single
+						page apps with React.js
+					</p>
+				</div>
+			</section>
+			<section id="projects">
+				<h2>Projects</h2>
+				<div class="projects-wrapper">
+					<div class="project-sidebar">
+						<ul>
+							<li id="social" class="selected project-button">
+								<img alt="social icon" class="icon-small" src="icons/letter-s-svgrepo-com.svg" />
+								<span>Social</span>
+							</li>
+							<li id="rps" class="project-button">
+								<img alt="rock paper scissors icon" class="icon-small" src="icons/icon-scissors.svg" />
+								<span>R/P/S</span>
+							</li>
+							<li id="store" class="project-button">
+								<img alt="social icon" class="icon-small" src="icons/cart-svgrepo-com.svg" />
+								<span>Store</span>
+							</li>
+							<li id="calculator" class="project-button">
+								<img
+									alt="calculator icon"
+									src="icons/calculator-svgrepo-com.svg"
+									class="icon-small"
+								/><span>Calculator</span>
+							</li>
+							<!-- <li id="vadsbo">Vadsbo</li> -->
+							<li id="d3" class="project-button">
+								<img alt="d3 logo" class="icon-small" src="icons/d3-js-svgrepo-com.svg" />
+								<span>D3.js</span>
+							</li>
+							<li id="snake" class="project-button">
+								<img alt="snake icon" src="icons/snake_icon.ico" class="icon-small" /><span
+									>Snake!</span
+								>
+							</li>
+						</ul>
+					</div>
+					<div id="project-display-panel">
+						<div id="snake-display" class="project-display">
+							<div class="project-info closable-info">
+								<div class="text-bottom">
+									<h3>{ Snake! }</h3>
+									<p>A simple snake clone</p>
+									<p>
+										Every programmer needs to build a snake clone. I build this over the course of
+										an afternoon as my first foray into game programming.
+									</p>
+									<p>Try adjusting the game options at the bottom of the page.</p>
+									<p class="bold">Technologies used: Vanilla HTML and Javascript</p>
+									<p>Click to close this information and explore the code</p>
+								</div>
+							</div>
+							<p
+								class="codepen"
+								data-height="850"
+								data-theme-id="dark"
+								data-default-tab="js,result"
+								data-slug-hash="rNJowZv"
+								data-user="reversethepolarity"
+								style="
+									height: 100%;
+									box-sizing: border-box;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									border: 2px solid;
+									margin: 1em 0;
+									padding: 1em;
+								"
+							>
+								<span
+									>See the Pen
+									<a href="https://codepen.io/reversethepolarity/pen/rNJowZv"> Snake!</a> by Samuel
+									(<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>) on
+									<a href="https://codepen.io">CodePen</a>.</span
+								>
+							</p>
+						</div>
+						<div id="calculator-display" class="project-display">
+							<div class="project-info closable-info">
+								<div class="text-bottom">
+									<h3>{ Calculator }</h3>
+									<p>Calculator App built with React Components</p>
+									<p>
+										Handles basic arithmetic as well as exponentials. Detects and prevents input
+										overflows. I originally created this with plain Javascript, then with React
+										Components, then again with React Hooks.
+									</p>
+									<p class="bold">Technologies used: React Components</p>
+									<p>Click to close this information and explore the code</p>
+								</div>
+							</div>
+							<p
+								class="codepen"
+								data-height="850"
+								data-theme-id="dark"
+								data-default-tab="js,result"
+								data-slug-hash="GROjpev"
+								data-user="reversethepolarity"
+								style="
+									height: 100%;
+									box-sizing: border-box;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									border: 2px solid;
+									margin: 1em 0;
+									padding: 1em;
+								"
+							>
+								<span
+									>See the Pen
+									<a href="https://codepen.io/reversethepolarity/pen/GROjpev"> React Calculator</a>
+									by Samuel (<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>)
+									on <a href="https://codepen.io">CodePen</a>.</span
+								>
+							</p>
+						</div>
+						<div id="d3-display" class="project-display">
+							<div class="project-info closable-info">
+								<div class="text-bottom">
+									<h3>{ D3.js }</h3>
+									<p>Data visualisation using D3.js</p>
+									<p>
+										Pulls historical temperature data from an API and programmatically creates a
+										heatmap charting temperature by year. This is one of several D3 projects you can
+										see on my Codepen account.
+									</p>
+									<p class="bold">Technologies used: D3.js, fetch API</p>
+									<p>Click to close this information and explore the code</p>
+								</div>
+							</div>
+							<p
+								class="codepen"
+								data-height="850"
+								data-theme-id="dark"
+								data-default-tab="js,result"
+								data-slug-hash="YzEKwJr"
+								data-user="reversethepolarity"
+								style="
+									height: 100%;
+									box-sizing: border-box;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									border: 2px solid;
+									margin: 1em 0;
+									padding: 1em;
+								"
+							>
+								<span
+									>See the Pen
+									<a href="https://codepen.io/reversethepolarity/pen/YzEKwJr"> Heat Map</a> by Samuel
+									(<a href="https://codepen.io/reversethepolarity">@reversethepolarity</a>) on
+									<a href="https://codepen.io">CodePen</a>.</span
+								>
+							</p>
+						</div>
+						<div id="social-display" style="display: block" class="project-display">
+							<div class="project-info socialbackground">
+								<div class="text-bottom">
+									<h3>{ Social }</h3>
 
-                                <p>A simple social networking website, built using React and Firestore.</p>
-                                <p class="bold">Technologies used: React (with Hooks), React Router, Firestore</p>
-                                <p>
-                                    Login using your GMail, or use one of the premade test accounts. Post a message, and
-                                    open the chat in the sidebar. This is very much still a work in progress, but it has
-                                    been a very useful learning experience.
-                                </p>
-                                <p>
-                                    Visit the app at
-                                    <a href="https://social-rtp.herokuapp.com/" target="_blank"
-                                        >social-rtp.herokuapp.com/</a
-                                    >
-                                </p>
-                                <p>Please be patient, Heroku can be slow to start up</p>
-                            </div>
-                        </div>
-                        <img class="screenshot" alt="screenshot of project named social" src="/images/social.webp" />
-                    </div>
-                    <div id="rps-display" class="project-display">
-                        <div class="project-info">
-                            <div id="rps-info" class="text-bottom">
-                                <h4>{ Rock Paper Scissors }</h4>
+									<p>A simple social networking website, built using React and Firestore.</p>
+									<p class="bold">Technologies used: React (with Hooks), React Router, Firestore</p>
+									<p>
+										Login using your GMail, or use one of the premade test accounts. Post a message,
+										and open the chat in the sidebar. This is very much still a work in progress,
+										but it has been a very useful learning experience.
+									</p>
+									<p>
+										Visit the app at
+										<a href="https://social-rtp.herokuapp.com/" target="_blank"
+											>social-rtp.herokuapp.com/</a
+										>
+									</p>
+									<p>Please be patient, Heroku can be slow to start up</p>
+								</div>
+							</div>
+						</div>
+						<div id="rps-display" class="project-display">
+							<div class="project-info rps-background">
+								<div id="rps-info" class="text-bottom">
+									<h3>{ Rock Paper Scissors }</h3>
 
-                                <p>The classic game, built using React and packaged with Vite</p>
-                                <p class="bold">Technologies used: React, Vite</p>
-                                <p>
-                                    A fun project using an idea and assets from frontendmentor.io. It gave me lots of
-                                    opportunity to work on CSS animations and making a satisfying user experience.
-                                </p>
-                                <p>
-                                    Visit the app at
-                                    <a href="http://rtp-projects.epizy.com/rock-paper-scissors/" target="_blank"
-                                        >rtp-projects.epizy.com/rock-paper-scissors</a
-                                    >
-                                </p>
-                            </div>
-                        </div>
-                        <img
-                            class="screenshot"
-                            alt="screenshot of project named rock paper scissors"
-                            src="/images/r-p-s.webp"
-                        />
-                    </div>
-                    <div id="store-display" class="project-display">
-                        <div class="project-info">
-                            <div id="store-info" class="text-bottom">
-                                <h4>{ Store }</h4>
+									<p>The classic game, built using React and packaged with Vite</p>
+									<p class="bold">Technologies used: React, Vite</p>
+									<p>
+										A fun project using an idea and assets from frontendmentor.io. It gave me lots
+										of opportunity to work on CSS animations and making a satisfying user
+										experience.
+									</p>
+									<p>
+										Visit the app at
+										<a href="http://rtp-projects.epizy.com/rock-paper-scissors/" target="_blank"
+											>rtp-projects.epizy.com/rock-paper-scissors</a
+										>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="store-display" class="project-display">
+							<div class="project-info store-background">
+								<div id="store-info" class="text-bottom">
+									<h3>{ Store }</h3>
 
-                                <p>
-                                    A simple e-commerce storefront. Client built with React, backend built with Node and
-                                    Stripe
-                                </p>
-                                <p class="bold">Technologies used: React, Node.js, Express, Stripe</p>
-                                <p>
-                                    Add some items to your cart, then use card 4242 4242 4242 4242, CVC 424 to complete
-                                    a test purchase.
-                                </p>
-                                <p>
-                                    Visit the app at
-                                    <a href="https://store-rtp314.herokuapp.com/" target="_blank"
-                                        >store-rtp314.herokuapp.com/</a
-                                    >
-                                </p>
-                                <p>Please be patient, Heroku can be slow to start up</p>
-                            </div>
-                        </div>
-                        <img class="screenshot" alt="screenshot of project named store" src="/images/store.webp" />
-                    </div>
-                </div>
-            </section>
-            <section id="contact">
-                <div class="flex feature-wrapper reverse">
-                    <div>
-                        <p>
-                            Contact me by email or on LinkedIn. I'll be happy to talk about making your next project
-                            come to life.
-                        </p>
-                        <p>
-                            Email:
-                            <a href="mailto:samuelreed01@gmail.com">samuelreed01@gmail.com</a>
-                        </p>
-                        <p>
-                            LinkedIn:
-                            <a href="https://www.linkedin.com/in/samuelreed01/">linkedin.com/in/samuelreed01/</a>
-                        </p>
-                    </div>
-                    <div class="feature color3">
-                        <span class="feature-title">Design without Limits</span>
-                        <br /><span class="feature-subtitle"
-                            >Let me handle the details, so you can focus on the big picture</span
-                        >
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>Site hand coded by Samuel Reed using free-range, organic HTML/CSS/JS</footer>
-    </body>
+									<p>
+										A simple e-commerce storefront. Client built with React, backend built with Node
+										and Stripe
+									</p>
+									<p class="bold">Technologies used: React, Node.js, Express, Stripe</p>
+									<p>
+										Add some items to your cart, then use card 4242 4242 4242 4242, CVC 424 to
+										complete a test purchase.
+									</p>
+									<p>
+										Visit the app at
+										<a href="https://store-rtp314.herokuapp.com/" target="_blank"
+											>store-rtp314.herokuapp.com/</a
+										>
+									</p>
+									<p>Please be patient, Heroku can be slow to start up</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="contact">
+				<div class="flex feature-wrapper reverse">
+					<div>
+						<p>
+							Contact me by email or on LinkedIn. I'll be happy to talk about making your next project
+							come to life.
+						</p>
+						<p>
+							Email:
+							<a href="mailto:samuelreed01@gmail.com">samuelreed01@gmail.com</a>
+						</p>
+						<p>
+							LinkedIn:
+							<a href="https://www.linkedin.com/in/samuelreed01/">linkedin.com/in/samuelreed01/</a>
+						</p>
+					</div>
+					<div class="feature color3">
+						<span class="feature-title">Design without Limits</span>
+						<br /><span class="feature-subtitle"
+							>Let me handle the details, so you can focus on the big picture</span
+						>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>Site hand coded by Samuel Reed using free-range, organic HTML/CSS/JS</footer>
+	</body>
 </html>
