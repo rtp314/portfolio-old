@@ -35,6 +35,12 @@
 	}
 }
 
+@media (prefers-reduced-motion) {
+	* {
+		animation: none !important;
+	}
+}
+
 html {
 	scroll-padding-top: 4rem;
 	scroll-behavior: smooth;
@@ -59,11 +65,26 @@ body {
 p {
 	max-width: 60ch;
 	font-size: var(--fs-body);
+	line-height: 1.5;
 }
 
 h2 {
 	font-family: var(--ff-heading);
 	font-size: var(--fs-subheading);
+	--bracket-color: var(--color-faint);
+
+	&::before {
+		content: "[";
+		color: var(--bracket-color);
+		position: relative;
+		right: 1rem;
+	}
+	&::after {
+		content: "]";
+		color: var(--bracket-color);
+		position: relative;
+		left: 1rem;
+	}
 }
 
 // NAVBAR
@@ -187,14 +208,44 @@ nav {
 
 section {
 	max-width: 80rem;
-	margin: 3rem auto;
+	margin: 10rem auto;
 
 	p {
-		margin: 1rem 2rem;
+		margin: 1rem auto;
 	}
 
 	h2 {
+		margin-top: 5rem;
 		text-align: center;
+	}
+}
+
+.icon-grid {
+	overflow: hidden;
+
+	& > div {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1rem;
+		// justify-content: flex-start;
+		height: 200px;
+		aspect-ratio: 0.25;
+		animation: scroll 30s linear infinite;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	.icon-js {
+		height: 100%;
+		aspect-ratio: 1;
 	}
 }
 
@@ -244,23 +295,8 @@ section {
 		font-weight: bold;
 		padding-right: 1em;
 		min-width: max-content;
-
-		&::after {
-			content: "";
-			position: absolute;
-			inset: 0 0.2em;
-			background-color: var(--accent-color);
-			transform-origin: 0% 90%;
-			transform: scaleY(0.3);
-			transition: transform 500ms;
-			z-index: -1;
-			opacity: 0.5;
-		}
-
-		&:hover::after {
-			transform: scaleY(0.9);
-		}
 	}
+
 	.feature-subtitle {
 		margin-top: 0.5rem;
 		display: block;
@@ -273,7 +309,6 @@ section {
 //PROJECTS
 
 #projects {
-	margin: 5rem 0;
 	background-color: var(--color-primary-300);
 	width: 100%;
 	max-width: 100%;
@@ -292,6 +327,7 @@ section {
 	h2 {
 		text-align: start;
 		padding: 1em 2em;
+		--bracket-color: var(--color-background);
 	}
 
 	.projects-wrapper {
@@ -427,6 +463,14 @@ footer {
 	flex-wrap: wrap;
 }
 
+.flex-align {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 1em;
+}
+
 .reverse {
 	flex-wrap: wrap-reverse;
 }
@@ -453,8 +497,21 @@ footer {
 	height: 1.2em;
 }
 
-.absolute {
-	position: absolute;
-	top: 0;
-	left: 0;
+.highlight {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0 0.2em;
+		background-color: var(--accent-color);
+		transform-origin: 0% 90%;
+		transform: scaleY(0.3);
+		transition: transform 500ms;
+		z-index: -1;
+		opacity: 0.5;
+	}
+
+	&:hover::after {
+		transform: scaleY(0.9);
+	}
 }
