@@ -1,3 +1,11 @@
+const isReduced =
+    window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
+    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+
+if (!isReduced) {
+    typingAnimation(document.querySelector(".subtitle"), 100);
+}
+
 function typingAnimation(el, delay) {
     function blinkCursor() {
         return new Promise((resolve) => {
@@ -41,60 +49,56 @@ function typingAnimation(el, delay) {
         .then(() => cursor.remove());
 }
 
-window.onload = function () {
-    const outer = document.getElementById("social-display");
-    const inner = document.getElementById("social-info");
-    if (outer.offsetHeight < inner.offsetHeight) {
-        outer.style.height = inner.offsetHeight + 10 + "px";
-    }
+const outer = document.getElementById("social-display");
+const inner = document.getElementById("social-info");
+if (outer.offsetHeight < inner.offsetHeight) {
+    outer.style.height = inner.offsetHeight + 10 + "px";
+}
 
-    const display = document.getElementById("project-display");
+const display = document.getElementById("project-display");
 
-    const social = document.getElementById("social");
-    const calculator = document.getElementById("calculator");
-    const d3 = document.getElementById("d3");
-    const snake = document.getElementById("snake");
-    const store = document.getElementById("store");
-    const rps = document.getElementById("rps");
+const social = document.getElementById("social");
+const calculator = document.getElementById("calculator");
+const d3 = document.getElementById("d3");
+const snake = document.getElementById("snake");
+const store = document.getElementById("store");
+const rps = document.getElementById("rps");
 
-    // const vadsbo = document.getElementById("vadsbo");
+// const vadsbo = document.getElementById("vadsbo");
 
-    const calculatorDisplay = document.getElementById("calculator-display");
-    const socialDisplay = document.getElementById("social-display");
-    const d3Display = document.getElementById("d3-display");
-    const snakeDisplay = document.getElementById("snake-display");
-    const storeDisplay = document.getElementById("store-display");
-    const rpsDisplay = document.getElementById("rps-display");
+const calculatorDisplay = document.getElementById("calculator-display");
+const socialDisplay = document.getElementById("social-display");
+const d3Display = document.getElementById("d3-display");
+const snakeDisplay = document.getElementById("snake-display");
+const storeDisplay = document.getElementById("store-display");
+const rpsDisplay = document.getElementById("rps-display");
 
-    // const vadsboDisplay = document.getElementById("vadsbo-display");
+// const vadsboDisplay = document.getElementById("vadsbo-display");
 
-    const buttons = [social, calculator, d3, snake, store, rps];
-    const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay, storeDisplay, rpsDisplay];
+const buttons = [social, calculator, d3, snake, store, rps];
+const displays = [calculatorDisplay, socialDisplay, d3Display, snakeDisplay, storeDisplay, rpsDisplay];
 
-    const closableInfo = Array.from(document.getElementsByClassName("absolute"));
+const closableInfo = Array.from(document.getElementsByClassName("absolute"));
 
-    closableInfo.forEach((div) => div.addEventListener("click", () => (div.style.display = "none")));
+closableInfo.forEach((div) => div.addEventListener("click", () => (div.style.display = "none")));
 
-    calculator.addEventListener("click", () => closeOthers(calculatorDisplay));
-    social.addEventListener("click", () => closeOthers(socialDisplay));
-    d3.addEventListener("click", () => closeOthers(d3Display));
-    snake.addEventListener("click", () => closeOthers(snakeDisplay));
-    store.addEventListener("click", () => closeOthers(storeDisplay));
-    rps.addEventListener("click", () => closeOthers(rpsDisplay));
+calculator.addEventListener("click", () => closeOthers(calculatorDisplay));
+social.addEventListener("click", () => closeOthers(socialDisplay));
+d3.addEventListener("click", () => closeOthers(d3Display));
+snake.addEventListener("click", () => closeOthers(snakeDisplay));
+store.addEventListener("click", () => closeOthers(storeDisplay));
+rps.addEventListener("click", () => closeOthers(rpsDisplay));
 
-    // vadsbo.addEventListener("click", () => closeOthers(vadsboDisplay));
+// vadsbo.addEventListener("click", () => closeOthers(vadsboDisplay));
 
-    function closeOthers(focused) {
-        displays.forEach((element) => {
-            if (element === focused) {
-                element.style.display = "block";
-                display.scrollIntoView({ behavior: "smooth" });
-            } else {
-                element.style.display = "none";
-            }
-            closableInfo.forEach((div) => (div.style.display = "block"));
-        });
-    }
-
-    typingAnimation(document.querySelector(".subtitle"), 100);
-};
+function closeOthers(focused) {
+    displays.forEach((element) => {
+        if (element === focused) {
+            element.style.display = "block";
+            display.scrollIntoView({ behavior: "smooth" });
+        } else {
+            element.style.display = "none";
+        }
+        closableInfo.forEach((div) => (div.style.display = "block"));
+    });
+}
