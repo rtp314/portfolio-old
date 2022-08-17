@@ -35,6 +35,21 @@
 		--fs-nav: 1rem;
 	}
 }
+@media only screen and (max-width: 800px) {
+	.projects-wrapper {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	#project-display-panel {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.project-info {
+		padding: 1em !important;
+	}
+}
 
 @media (prefers-reduced-motion) {
 	* {
@@ -316,9 +331,8 @@ section {
 
 #projects {
 	background-color: var(--color-primary-300);
-	width: 100%;
-	max-width: 100%;
-	min-width: 100%;
+	position: relative;
+	width: min(100%, 1300px);
 	--clip-width: 20rem;
 	--clip-height: 8rem;
 	clip-path: polygon(
@@ -345,8 +359,14 @@ section {
 	}
 
 	.project-sidebar {
+		position: sticky;
+		top: 2.5rem;
 		flex-basis: 10rem;
 		flex-grow: 1;
+		height: auto;
+		align-self: flex-start;
+		z-index: 2;
+		background-color: var(--color-faint);
 
 		ul {
 			display: flex;
@@ -429,22 +449,27 @@ section {
 	}
 
 	.socialbackground {
-		background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
-			url("images/social.webp");
+		background: linear-gradient(#fffd, #fffd), url("images/social.webp");
 		background-repeat: no-repeat;
 		background-size: min(100%, 60rem);
 		background-position: top;
 	}
 	.rps-background {
-		background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
-			url("images/r-p-s.webp");
+		// background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
+		// 	url("images/r-p-s.webp");
+		background: linear-gradient(#fffd, #fffd), url("images/r-p-s.webp");
 		background-repeat: no-repeat;
 		background-size: min(100%, 60rem);
 		background-position: top;
 	}
 	.store-background {
-		background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
-			url("images/store.webp");
+		background: linear-gradient(#fffd, #fffd), url("images/store.webp");
+		background-repeat: no-repeat;
+		background-size: min(100%, 60rem);
+		background-position: top;
+	}
+	.spacexbackground {
+		background: linear-gradient(#fffd, #fffd), url("images/spacex.webp");
 		background-repeat: no-repeat;
 		background-size: min(100%, 60rem);
 		background-position: top;
