@@ -448,31 +448,15 @@ section {
 		}
 	}
 
-	.socialbackground {
-		background: linear-gradient(#fffd, #fffd), url("images/social.webp");
-		background-repeat: no-repeat;
-		background-size: min(100%, 60rem);
-		background-position: top;
-	}
-	.rps-background {
-		// background: linear-gradient(15deg, rgba(253, 253, 247, 0.9) 30%, rgba(255, 255, 255, 0) 60%),
-		// 	url("images/r-p-s.webp");
-		background: linear-gradient(#fffd, #fffd), url("images/r-p-s.webp");
-		background-repeat: no-repeat;
-		background-size: min(100%, 60rem);
-		background-position: top;
-	}
-	.store-background {
-		background: linear-gradient(#fffd, #fffd), url("images/store.webp");
-		background-repeat: no-repeat;
-		background-size: min(100%, 60rem);
-		background-position: top;
-	}
-	.spacexbackground {
-		background: linear-gradient(#fffd, #fffd), url("images/spacex.webp");
-		background-repeat: no-repeat;
-		background-size: min(100%, 60rem);
-		background-position: top;
+	$projects: social, rps, store, spacex;
+
+	@each $project in $projects {
+		.#{$project}background {
+			background: linear-gradient(#fffd, #fffd), url("images/#{$project}.webp");
+			background-repeat: no-repeat;
+			background-size: min(100%, 60rem);
+			background-position: top;
+		}
 	}
 }
 
