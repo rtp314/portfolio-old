@@ -117,7 +117,7 @@
 		}
 	}
 
-	$projects: social, rps, store, spacex;
+	$projects: social, rps, store, spacex, node;
 
 	@each $project in $projects {
 		.#{$project}background {

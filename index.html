@@ -86,6 +86,9 @@
 					working in the education sector, I'm returning to the field which originally sparked my interest.
 				</p>
 			</section>
+
+			<!-- Project Buttons -->
+
 			<section id="projects">
 				<h2>Projects</h2>
 				<div class="projects-wrapper">
@@ -94,6 +97,10 @@
 							<li id="social" class="selected project-button">
 								<img alt="social icon" class="icon-small" src="icons/letter-s-svgrepo-com.svg" />
 								<span>Social</span>
+							</li>
+							<li id="node" class="project-button">
+								<img alt="node icon" class="icon-small" src="icons/lock-svgrepo-com.svg" />
+								<span>Auth Server</span>
 							</li>
 							<li id="spacex" class="project-button">
 								<img alt="spacex icon" class="icon-small" src="icons/spacexlogo.png" />
@@ -125,7 +132,12 @@
 							</li>
 						</ul>
 					</div>
+
+					<!-- Project Displays -->
+
 					<div id="project-display-panel">
+						<!-- Codepen -->
+
 						<div id="snake-display" class="project-display">
 							<div class="project-info closable-info">
 								<div class="text-bottom">
@@ -246,6 +258,9 @@
 								>
 							</p>
 						</div>
+
+						<!-- Non-Codepen -->
+
 						<div id="spacex-display" class="project-display">
 							<div class="project-info spacexbackground">
 								<div class="text-bottom">
@@ -263,6 +278,29 @@
 											>rtp-projects.epizy.com/spacex</a
 										>
 									</p>
+								</div>
+							</div>
+						</div>
+						<div id="node-display" class="project-display">
+							<div class="project-info nodebackground">
+								<div class="text-bottom">
+									<h3>{ Node Authorisation Server }</h3>
+
+									<p>A simple Node server which authenticates and authorises using JSON Web Tokens</p>
+									<p class="bold">
+										Technologies used: Node & Express, Pug, jsonwebtoken, bcrypt, MongoDB
+									</p>
+									<p>
+										No front-end libraries used, and only a few lines of Javascript are served to
+										the client. All HTML is generated server-side with Pug.js
+									</p>
+									<p>
+										Visit the app at
+										<a href="https://jagged-admitted-case.glitch.me" target="_blank"
+											>jagged-admitted-case.glitch.me</a
+										>
+									</p>
+									<p>Please be patient, Glitch can be slow to start up</p>
 								</div>
 							</div>
 						</div>
